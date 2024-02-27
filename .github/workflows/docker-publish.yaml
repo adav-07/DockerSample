@@ -25,3 +25,6 @@ jobs:
         tags: |
           adav07/sample-docker-project:latest
           adav07/sample-docker-project:${{ github.sha }}
+          adav07/sample-docker-project:${{ env.VERSION }}
+      env:
+        VERSION: ${{ github.event.release.tag_name }}
